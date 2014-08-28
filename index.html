@@ -1,13 +1,48 @@
 <!DOCTYPE>
 <html>
 <head>
+	<link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+	<script src="jquery-2.1.0.js"></script>	
+	<style>
+		h1 {
+			white-space: nowrap;
+			color:yellow;
+			font-family: "Fjalla One", sans-serif;
+		}
+		div:nth-child(n+2)
+		{
+			z-index:-50;
+		}
+	</style>
 </head>
 <body>
 	<div style="position : fixed; z-index:-99; width:100%; height:100%">
 	<iframe frameborder="0" height="100%" width="100%"
-		src="//www.youtube.com/embed/AGlKJ8CHAg4?start=500&autoplay=1&controls=0&showinfo=0">
+		src="//www.youtube.com/embed/AGlKJ8CHAg4?autoplay=1&controls=0&start=10&showinfo=0">
 	</iframe>
 	</div>
+	<h1 style="position: absolute; top:50%;left:50%;font-size:100px">Our first loan in Relay closed today!!</h1>
+	<script type="text/javascript">
+		function moveit() {
+
+			var newTop = Math.floor(Math.random()*350);
+			var newLeft = Math.floor(Math.random()*200);
+			var newDuration = Math.floor(Math.random()*5000);
+
+			$('h1').animate({
+			  top: newTop,
+			  left: newLeft,
+			  }, newDuration, function() {
+				moveit();
+			  });
+
+		}
+
+		$(document).ready(function() {
+			console.log("ASD");
+			moveit();
+		});
+	</script>
 	<script language="JavaScript1.2">
 <!-- Begin
 /*
@@ -16,20 +51,28 @@ Visit www.rainbow.arch.scriptmania.com/scripts/index.html
   for this script and many more
 */
     // Configure below - change number of images to render
-var no = 8; 
+var no = 16; 
     // Configure speed below
-var speed = 20;   // The smaller the number, the faster the movement
+var speed = 5;   // The smaller the number, the faster the movement
 
 var floatr = new Array();
    //  Your image location
 floatr[0] = "http://rainbow.arch.scriptmania.com/scripts/bg/balloon0.gif"
-floatr[1] = "http://rainbow.arch.scriptmania.com/scripts/bg/balloon1.gif"
-floatr[2] = "http://rainbow.arch.scriptmania.com/scripts/bg/balloon2.gif"
+floatr[1] = "http://anagramballoons.com/images/products/26870.gif"
+floatr[2] = "http://www.iconarchive.com/download/i25884/mohsenfakharian/christmas/balloons.ico"
 floatr[3] = "http://rainbow.arch.scriptmania.com/scripts/bg/balloon3.gif"
 floatr[4] = "http://rainbow.arch.scriptmania.com/scripts/bg/balloon4.gif"
-floatr[5] = "http://rainbow.arch.scriptmania.com/scripts/bg/balloon5.gif"
+floatr[5] = "https://lh4.googleusercontent.com/-BaRBBMdMdgI/AAAAAAAAAAI/AAAAAAAAAAA/A_xsyTKuo44/photo.jpg"
 floatr[6] = "http://rainbow.arch.scriptmania.com/scripts/bg/balloon6.gif"
 floatr[7] = "http://rainbow.arch.scriptmania.com/scripts/bg/balloon7.gif"
+floatr[8] = "http://rainbow.arch.scriptmania.com/scripts/bg/balloon0.gif"
+floatr[9] = "http://www2.psd100.com/ppp/2013/11/0601/Colored-balloon-icon-1106043934.png"
+floatr[10] = "http://rainbow.arch.scriptmania.com/scripts/bg/balloon2.gif"
+floatr[11] = "http://rainbow.arch.scriptmania.com/scripts/bg/balloon3.gif"
+floatr[12] = "http://rainbow.arch.scriptmania.com/scripts/bg/balloon4.gif"
+floatr[13] = "http://rainbow.arch.scriptmania.com/scripts/bg/balloon5.gif"
+floatr[14] = "http://rainbow.arch.scriptmania.com/scripts/bg/balloon6.gif"
+floatr[15] = "http://rainbow.arch.scriptmania.com/scripts/bg/balloon7.gif"
 
 
 var ns4up = (document.layers) ? 1 : 0;  // browser sniffer
