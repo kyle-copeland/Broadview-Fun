@@ -1,0 +1,14 @@
+{
+  "name": "Celebration",
+  "description": "It's a celebration!",
+  "version": "0.0.1",
+  "engines": {
+    "node": "0.10.x",
+	"express": "4.x"
+  },
+  "scripts": {
+  "start": "node server.js",
+  "test": "mocha",
+  "postinstall": "bower install && grunt build"
+ }
+}
